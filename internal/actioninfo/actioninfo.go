@@ -17,12 +17,12 @@ func Info(dataset []string, dp DataParser) {
 		err := dp.Parse(v)
 		if err != nil {
 			log.Print("function Info: parsing method fault")
-			break
+			continue
 		}
 		output, err := dp.ActionInfo()
 		if err != nil {
 			log.Print("function Info: ActionInfo method fault")
-			break
+			continue
 		}
 		fmt.Print(output)
 	}
